@@ -1,0 +1,9 @@
+diff a/Exercise1/thiennq/TestJava.java b/Exercise1/thiennq/TestJava.java	(rejected hunks)
+@@ -17,6 +17,7 @@
+      * @param args the command line arguments
+      */
+     public static void main(String[] args) {
++        // them comment
+         // TODO code application logic here
+         System.out.println("Hello Word");
+     }

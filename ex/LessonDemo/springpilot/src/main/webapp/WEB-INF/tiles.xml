@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+
+<tiles-definitions>  
+  
+    <!-- Base Definition -->
+    <definition name="base"
+                template="/WEB-INF/jsp/layout/base.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/jsp/widget/header.jsp" />  
+        <put-attribute name="content" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/jsp/widget/footer.jsp" />  
+    </definition>  
+  
+    <!-- Home Page -->
+    <definition name="home" extends="base">  
+        <put-attribute name="title" value="Trang chu" />  
+        <put-attribute name="content" value="/WEB-INF/jsp/pages/home.jsp" />  
+    </definition>  
+   
+    <!-- Product layout -->
+    <definition name="product" template="/WEB-INF/jsp/layout/product.jsp">  
+        <put-attribute name="title" value="Sản phẩm" />  
+        <put-attribute name="header" value="/WEB-INF/jsp/widget/header.jsp" />  
+        <put-attribute name="menu_left" value="/WEB-INF/jsp/widget/menu_left.jsp" />  
+        <put-attribute name="content" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/jsp/widget/footer.jsp" />  
+    </definition> 
+   
+    <!-- Product Page -->
+    <definition name="product.*" extends="product">  
+        <put-attribute name="title" value="Danh sách sản phẩm" />  
+        <put-attribute name="content" value="/WEB-INF/jsp/pages/product/{1}.jsp" />  
+    </definition> 
+    
+    <definition name="layout.user.*" extends="product">  
+        <put-attribute name="title" value="Quản lý user" />  
+        <put-attribute name="content" value="/WEB-INF/jsp/pages/user/{1}.jsp" />  
+    </definition>  
+
+  
+</tiles-definitions>

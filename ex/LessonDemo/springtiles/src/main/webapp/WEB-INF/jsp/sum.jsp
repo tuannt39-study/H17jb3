@@ -1,0 +1,19 @@
+<%-- 
+    Document   : hello
+    Created on : Jun 7, 2017, 8:51:33 PM
+    Author     : haopv
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <h1>Tổng !</h1>
+        Tổng: ${tong}
+    </body>
+    
+</html>

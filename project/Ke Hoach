@@ -1,0 +1,37 @@
+Phân tích, làm đơn giản thôi nhé.
+Tiếp theo:
+-Thiết kế database (LY)
+-Thiết kế giao diện: Dựa trên template mà thầy đã chia sẻ.
+-Thiết kế giao diện front-end: (THẠO)
+Hiển thị các trang, người dùng có thể nhìn thấy như home, tour trong nước, tour ngoài nước, liên hệ, chi tiết tour, đặt tour,..
+-Thiết kế giao diện back-end: (TUÂN)
+Hiển thị các trang để người quản lý thực hiện, CRUD (creat, read, update, delete) thông tin tour, thông tin booking tour, thông tin khách đi tour, chi tiết tour (red),...
+-Khởi tạo project:
++IDE: Intellij IDEA nhé, nó hỗ trợ nhiều :D
++GIT: Sẽ tạo 1 Reposetory trên GIT của lớp
++Sử dụng spring boot
+http://projects.spring.io/spring-boot/
+http://o7planning.org/vi/11267/huong-dan-su-dung-spring-boot
++Kết nối DB: Spring JDBC
+https://www.tutorialspoint.com/springjdbc/index.htm
++Điều khiển: Spring Web MVC
+http://projects.spring.io/spring-framework/
++Hiển thị: template engine Thymeleaf
+http://www.thymeleaf.org/documentation.html
+
+- Giao diện quản lý:
+
+MANAGER
++ Quản lý thông tin các tour đang được hiển thị trên giao diện người dùng. (Create, Read)
++ Quản lý các booking tour (RUD)
++ Thông tin hướng dẫn viên
+
+ADMIN
++ Có tất cả quyền của MANAGER
++ Quản lý thông tin các tour đang được hiển thị trên giao diện người dùng. (CRUD)
++ Quản lý thông tin các tour đang chờ duyệt (Các tour được tạo từ MANAGER)
++ Quản lý các danh mục động, đa cấp.
++ Quản lý tài khoản, phân quyền tài khoản (CRUD)
++ Quản lý footer, thông tin liên hệ web 
+
+

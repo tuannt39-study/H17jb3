@@ -1,0 +1,133 @@
+Ly - Hiến - Tuân - Thạo
+Đề tài 8: Xây dựng hệ thống website quản lý tour du lịch
+Các chức năng cơ bản:
+Backend:
+Phân quền quản lý admin
+Quản lý admin các cấp, quyền: Superadmin, admin, author,…
+Quản lý danh mục tour động, đa cấp: Tour Nội địa (Tour miền bắc, miền nam, biển đảo,…), Tour quốc tế (châu á, châu âu,…),…
+Quản lý Tour thêm sửa xóa: bao gồm tên tên tour, danh mục, hình ảnh, thông tin tour(thời gian, lịch khởi hành, nơi khởi hành, số chỗ), mô tả, giá niêm yết, giá khuyến mại (nếu có), nổi bật, tour liên quan…
+Tour phải qua cấp phê duyệt mới hiện thị frontend
+…
+Frontend:
+Giao diện website trang chủ hiện thị hợp lý
+Trang danh sách tours theo danh mục
+Trang thông tin chi tiết tour, liên quan, nổi bật,…
+Tìm kiếm tour theo các tiêu chí, đặt tour
+Các chức năng tùy chọn nâng cao:
+Quản lý các banner quảng cáo
+Trang dịch vụ: giới thiệu các dịch vụ liên quan: đăng ký visa, vé máy bay, đặt phòng…
+Cho phép người dùng chia sẻ thông tin với bạn bè
+Form liên hệ
+…
+
+-Quản lý tour:
++Quản lý thông tin, các chương trình tour.
++Menu: Trang chủ - Trong nước - Ngoài nước - Liên hệ
++Du lịch trong nước: https://travel.com.vn/du-lich-viet-nam.aspx
+Giới thiệu - Hiển thị các tour hot được nhiều người đặt lên đầu, hiển thị toàn bộ các tour trong nước phân theo trang.
++Du lịch nước ngoài: https://travel.com.vn/du-lich-nuoc-ngoai.aspx
+Giới thiệu - Hiển thị các tour hot được nhiều người đặt lên đầu, hiển thị toàn bộ các tour trong nước phân theo trang.
++Chi tiết 1 tour du lịch: https://travel.com.vn/tourNDSGN307-020-060717BL-U/hue-la-vang-dong-thien-duong-cu-lao-cham-hoi-an-ba-na-da-nang-tang-ve-xem-charming-show.aspx?TO=1
+
+----------------------------------------------------------
+-Mã tour: NDSGN307-020-060717BL-U
+Điểm đến: Huế - La Vang - Động Thiên Đường - Cù Lao Chàm - Hội An - Bà Nà - Đà Nẵng
+Thời gian: 5 ngày, 4 đêm
+Nơi khởi hành: Hà Nội
+Dịch vụ đi kèm: Bảo hiểm, bữa ăn, hướng dẫn viên, vé tham quan, xe đưa đón.
+
+-Chương trình tour:
+Ngày 1: Nơi khởi hành - Huế: ... Nghỉ đêm tại Huế
+Ngày 2: Huế - Động Thiên Đường: ... Nghỉ đêm tại Quảng Bình
+Ngày 3: Quảng Bình - Đà Nẵng: ... Nghỉ đêm tại Đà Nẵng
+Ngày 4: Đà Nẵng - Cù Lao Chàm - Hội An: ... Nghỉ đêm tại Đà Nẵng
+Ngày 5: Đà Nẵng - Bà Nà - Nơi về: ...
+
+-Giá tour:
+Người lớn > 12: 100% 7tr
+Trẻ em: 5 - 12: 65% 4tr5
+Trẻ nhỏ: 2 - 5: 35% 2tr5
+Em bé < 2: 5% 300k
+
+-Lưu ý: ...
+
+-Liên hệ:
+Địa chỉ: 03 Hai Bà Trưng, Quận Hoàn Kiếm, Hà Nội
+Điện thoại: (84-24) 3933 1978 - Fax: (84-24) 3933 1979
+E-mail: vtv.hanoi@vietravel.com
+----------------------------------------------------------
+-Thông tin tour: https://travel.com.vn/tourNDSGN307-020-060717BL-U/hue-la-vang-dong-thien-duong-cu-lao-cham-hoi-an-ba-na-da-nang-tang-ve-xem-charming-show.aspx?TO=1
+tour (matour, tentour, thoigian, giatour, giakm, noikhoihanh, dichvu, tttour, xetduyet(0 vs 1))
+
+-Ảnh:
+image (maanh, urlanh, diadiem)
+
+-Thông tin hướng dẫn viên:
+hdv (mahdv, tenhdv, gioitinh, dia chi, sdt)
+
+-Thông tin book tour: https://travel.com.vn/booking/inbound?tourId=c6d8d8d6-e9ff-46c4-bdbf-88a2350235b4
+-Khách liên lạc liên lạc:
+lienlac (mall, ten, email, sdt, diachi, ghichu)
+
+-Danh sách khách đi tour:
+khachhang (makhach, ten, dotuoi(nguoilon, treem, trenho, embe), ngaysinh, gioitinh, gia)
+
+-Chi tiết tour:
+cttour (matour, mahdv, mall, phuongtien, ngaydi, noidon, ngayve, noive, nguoilon, treem, trenho, embe, xacnhan(0 vs 1))
+
+----------------------------------------------------------
+
+Dịch vụ: Khách sạn, nhà hàng, thuê xe.
+Khánh tính phí, khách dự kiến, chi phi/khách, tổng giá.
+
+-Quản lý kinh doanh tour:
++Tour mở bán, chờ duyệt, ghi nhận Booking/Order, trạng thái khác.
++danh sách khách hàng, người đại diện liên hệ.
++thông tin du khách từng tour.
+
++Thông tin chung:
+Khách hàng: công ty...
+mã tour: ...
+phương tiện: ...
+loại tour: ...
+thị trường: ...
+ghi chú: ...
+
++Ngày đi tour:
+Thời gian: 4 ngày 3 đêm
+Ngày đi: 1/1/2017
+Nơi đón: ...
+Ngày về: 4/1/2017
+Nơi về: ...
+
++Khách đi tour:
+Số khách: ..
+Người lớn > 16 100%: ..  Đơn giá Tổng tiền ng lớn
+Trẻ em 6<16 50%: ..
+Tổng cộng
+
+-Quản lý điều hành, tổ chức tour:
++Quản lý yêu cầu dịch vụ
++Quản lý đặt dịch Vụ
++Dịch Vụ Tour
++Quản lý tiến trình tour
++Lịch Hướng Dẫn Viên
+
++Quản lý dich vụ đặt chỗ
+Dịch vụ: khách sạn, nhà hàng, tham quan, vé tàu, 
+Mã đặt chỗ: ...
+TT Đặt chỗ: Hủy, xác nhận
+TT thanh toán: còn nợ, mới, xong
+tt điều phối: đã hết, chưa xử lý, còn tồn
+ngày dùng từ: ...
+ngày dùng đến: ...
+tổng giá trị: ...
+đã thanh toán: ...
+còn lại: ...
+nhà cung cấp: ...
+
+-quản lý thanh toán, chi trả
+-Quản lý Tiếp  thị & Chăm sóc KH
+-Báo cáo thống kê & Duyệt
+-Phân hệ quản trị hệ thống: người dùng
+

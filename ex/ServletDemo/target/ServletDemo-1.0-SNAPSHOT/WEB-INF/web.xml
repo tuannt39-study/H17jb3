@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <session-config>
+        <session-timeout>
+            3
+        </session-timeout>
+    </session-config>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>advanceServlet.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/Admin*</url-pattern>
+        <!--<url-pattern>/*</url-pattern>-->
+    </filter-mapping>
+    <listener>
+        <description>HttpSessionListener</description>
+        <listener-class>advanceServlet.TraceSessionServletListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>Demo Servlet 1</servlet-name>
+        <servlet-class>com.mycompany.servletdemo.Demo1Servlet</servlet-class>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>admin</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>123456</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Demo Servlet 1</servlet-name>
+        <url-pattern>/Demo1Servlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>servlet1</servlet-name>
+        <servlet-class>com.mycompany.servletdemo.DemoServletAno</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/DmSl</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>db</param-name>
+        <param-value>jsbdc....</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbUser</param-name>
+        <param-value>Oracle.....</param-value>
+    </context-param>
+</web-app>
